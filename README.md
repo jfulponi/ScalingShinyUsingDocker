@@ -25,8 +25,8 @@ Google Cloud with more RAM and CPUs available.
 
 ## Installing docker
 
-To install Docker, the file is obtained from the official page and
-install normally. On OSX, as is my case, after downloading the
+You can install Docker from the official page, downloading and executing the installer as any program. 
+On OSX, as is my case, after downloading the
 .dmg is installed as follows from the terminal:
 
 ``` bash
