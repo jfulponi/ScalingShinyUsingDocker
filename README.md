@@ -116,7 +116,7 @@ docker login
 It will ask us for the Docker username and password. We write it and then:
 
 ``` bash
-docker build -t nombreapp .
+docker build -t appname .
 ```
 
 That command will build an image called “appname” with the parameters
@@ -133,7 +133,7 @@ Docker. The work is divided into "layers", so if you correct a
 small part of the code, the build and push of the app take seconds.
 
 ``` bash
-docker tag nombreapp usuario/nombreapp:latest
+docker tag appname user/appname:latest
 ```
 
 We “tag” the app within the public repository that we are about to create.
@@ -143,7 +143,7 @@ a name that we can put to identify the latest version of the
 app. We can modify it for each version.
 
 ``` bash
-docker push usuario/nombreapp:latest
+docker push user/appname:latest
 ```
 
 The image is pushed to the repository, just as if it were GitHub.
@@ -162,7 +162,7 @@ Later, we “bring” the Docker image to our project.
 Google Cloud with the latest changes.
 
 ``` bash
-docker pull usuario/nombreapp:latest
+docker pull user/appname:latest
 ```
 
 Then, analogously to what we did in Docker, the image is "tagged"
@@ -171,13 +171,13 @@ Google Cloud image container. Replace PROJECT_ID with the ID of
 your project.
 
 ``` bash
-docker tag usuario/nombreapp:latest gcr.io/PROJECT_ID/usuario/nombreapp:latest
+docker tag user/appname:latest gcr.io/PROJECT_ID/user/appname:latest
 ```
 
 Finally, we push the image.
 
 ``` bash
-docker push gcr.io/PROJECT_ID/usuario/nombreapp:latest
+docker push gcr.io/PROJECT_ID/user/appname:latest
 ```
 
 ## Create the service instance
